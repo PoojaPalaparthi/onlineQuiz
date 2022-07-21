@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 900px;
+    background-color: white;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+    min-height: 350px;
+    padding: 80px 90px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.left-side,
+.right-side{
+    width: 50%;
+}
+
+.left-side img{
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.right-side h1{
+    color: rgb(30, 30, 152);
+}
+
+.right-side h2{
+    color: rgb(53, 53, 67);
+    margin: 20px auto 10px;
+}
+
+.right-side ul{
+    color: rgb(110, 108, 108);
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 600;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.right-side li{
+    margin-top: 10px;
+}
+
+.right-side a{
+    text-decoration: none;
+    background-color: rgb(30, 30, 152);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/* end of first page*/
+
+/* start of questions page*/
+
+.box{
+    width: 640px;
+    background-color: white;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+    min-height: 350px;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+
+.title{
+    border-bottom: 2px solid lightgray;
+    color:rgb(30, 30, 152);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header{
+    margin-bottom:30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-box,
+.timer-box{
+    border: 1px solid #444;
+    border-radius: 30px;
+    padding: 10px 15px; 
+    color: #444;
+}
+
+.question-box{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+
+}
+
+.option-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    grid-gap: 15px;
+    
+}
+
+.option-box span{
+    background-color: rgb(197, 185, 208);
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px 15px;
+}
+
+.option-box span.right{
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+
+.option-box span.wrong{
+    background-color: rgb(245, 5, 5);
+    border-color: rgb(245, 5, 5);
+    color: white;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 15px;
+
+}
+
+.result-box{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    font-size: 20px;
+}
+
+.result-box *:nth-child(odd){
+    text-align: right;
+}
+
+.result-box span{
+    font-weight: 700 ;
+}
+
+
+.start-again-box{
+    border-top: 2px solid lightgray;
+    text-align: center;
+}
+
+.start-again-box a{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-decoration: none ;
+    margin-top: 30px;
+    display: inline-block;
+    
+}
+
+/* end of questions page*/
+
+
+/* start of media queries*/
+
+@media screen and (max-width: 768px){
+
+    .left-side{
+        display: none;
+    }
+    .container,
+    .box{
+        width: 424px;
+    }
+    .right-side{
+        width: 100%;
+    }
+
+    .right-side h1{
+       font-size: 22px;
+    }
+
+    .right-side h2{
+        font-size: 18px;
+        margin-bottom: 20px;
+     }
+
+     .right-side li{
+        font-size: 15px;
+     }
+
+     .option-box{
+        grid-template-columns: 1fr;
+     }
+}
+
+
+
+
+
+/* end of media queries*/
